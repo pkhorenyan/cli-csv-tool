@@ -35,7 +35,7 @@ def apply_filter(rows: List[Dict[str, str]], condition: Optional[str]) -> List[D
 
 def parse_condition(condition: str) -> Tuple[str, str, str]:
     """Парсит строку условия фильтрации, например 'price>500'."""
-    for op in ['>=', '<=', '>', '<', '=']:
+    for op in ['>', '<', '=']:
         if op in condition:
             column, value = condition.split(op)
             return column.strip(), op, value.strip()
