@@ -16,10 +16,10 @@ def apply_filter(rows: List[Dict[str, str]], condition: Optional[str]) -> List[D
     if not condition:
         return rows
     column, op, value = parse_condition(condition)
-    filtered: List[Dict[str, str]] = []
+    filtered = []
 
     for row in rows:
-        cell: Any = row[column]
+        cell = row[column]
         if is_number(cell):
             cell = float(cell)
             value = float(value)
