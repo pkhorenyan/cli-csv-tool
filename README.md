@@ -10,9 +10,11 @@ ___
 ### Примеры запросов
 
 `python main.py --file products.csv --aggregate "rating=avg"`
+
 ![img.png](img.png)
 
 `python main.py --file products.csv --where "brand=xiaomi" --aggregate "rating=min"`
+
 ![img_1.png](img_1.png)
 
 `python main.py --file products.csv --where "rating>4.5" --order-by "rating=desc"`
